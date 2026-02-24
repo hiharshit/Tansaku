@@ -1,0 +1,13 @@
+[project]
+name = "tansaku"
+version = "0.1.0"
+description = "Tansaku (探索) - Autonomous AI research agent with real-time web retrieval and structured synthesis."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph",
+    "langchain_ollama",
+    "langchain_community",
+    "tavily-python",
+    "python-dotenv",
+]
