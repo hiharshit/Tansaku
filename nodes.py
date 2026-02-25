@@ -8,9 +8,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Model setup
-model_json = ChatOllama(model="llama3", format="json")
+model_json = ChatOllama(model="gemma3:1b", format="json")
 
-model_text = ChatOllama(model="llama3", temperature=0)
+model_text = ChatOllama(model="gemma3:1b", temperature=0)
 
 tavily = TavilySearchResults(max_results=3)
 
