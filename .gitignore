@@ -25,6 +25,8 @@ MANIFEST
 venv/
 ENV/
 env/
+.env
+.env.local
 .env/
 
 # uv
