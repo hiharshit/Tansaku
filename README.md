@@ -1,10 +1,10 @@
 # Tansaku (探索)
 
-An autonomous AI research agent built with LangGraph that performs real-time web retrieval and synthesizes findings into structured responses.
+Tansaku (探索) means "explore" or "search" in Japanese - reflecting the agent's purpose of autonomously researching and gathering information.
 
 ## Overview
 
-Tansaku takes a research question, breaks it down into search queries, gathers relevant information from the web using Tavily, and synthesizes the results into a coherent answer using Ollama (Llama 3).
+Tansaku takes a research question, breaks it down into search queries, gathers relevant information from the web using Tavily, and synthesizes the results into a coherent answer using Ollama.
 
 ## How It Works
 
@@ -15,14 +15,20 @@ Tansaku takes a research question, breaks it down into search queries, gathers r
 ## Tech Stack
 
 - **LangGraph** - Orchestrates the agent workflow with state management and node-based execution
-- **LangChain Ollama** - Provides integration with Ollama for local LLM inference
+- **LangChain Ollama** - Provides integration with Ollama for local LLM inference (gemma3:1b)
 - **Tavily** - Delivers real-time web search results for research
 - **python-dotenv** - Loads environment variables from `.env` files
+
+## Prerequisites
+
+- [Python 3.11+](https://www.python.org/downloads/)
+- [Ollama](https://ollama.com/) - Get the gemma3:1b model: `ollama pull gemma3:1b`
+- [Tavily API Key](https://app.tavily.com/) - Sign up for free API access
 
 ## Requirements
 
 - Python 3.11+
-- Ollama running locally with Llama 3 model
+- Ollama with gemma3:1b model
 - Tavily API key
 
 ## Setup
@@ -33,16 +39,17 @@ Tansaku takes a research question, breaks it down into search queries, gathers r
    uv sync
    ```
 
-2. Copy `.env.example` to `.env` and add your API key:
+2. Rename `.env.example` to `.env` and add your API key:
 
    ```bash
    cp .env.example .env
    # Edit .env and add your TAVILY_API_KEY
    ```
 
-3. Ensure Ollama is running with Llama 3:
+3. Pull the gemma3:1b model and start Ollama:
    ```bash
-   ollama run llama3
+   ollama pull gemma3:1b
+   ollama run gemma3:1b
    ```
 
 ## Usage
