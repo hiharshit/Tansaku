@@ -70,3 +70,7 @@ Enter your research question when prompted. The agent will analyze the task, gat
 - `state.py` - State schema for the agent
 - `.env.example` - Environment variable template
 - `pyproject.toml` - Project dependencies
+
+## Acknowledgments
+
+Inspired by [kenkyu](https://github.com/sharpeye08/kenkyu.git) - a research agent that sparked the idea for this project.
